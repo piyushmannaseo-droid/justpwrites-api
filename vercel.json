@@ -15,11 +15,5 @@
       "src": "/(.*)",
       "dest": "dist/server.js"
     }
-  ],
-  "env": {
-    "MONGODB_URI": "@mongodb_uri",
-    "JWT_SECRET": "@jwt_secret",
-    "NODE_ENV": "production",
-    "PORT": "5000"
-  }
+  ]
 }
