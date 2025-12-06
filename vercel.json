@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/server.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30,
+        "memory": 1024
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/server.js"
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "@mongodb_uri",
+    "JWT_SECRET": "@jwt_secret",
+    "NODE_ENV": "production",
+    "PORT": "5000"
+  }
+}
